@@ -576,7 +576,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::QuestUI
   questText: {fileID: 48762361}
-  prefix: 'Kwi coins:'
+  prefix: 'Kiwi coins:'
 --- !u!1 &62619353
 GameObject:
   m_ObjectHideFlags: 0
