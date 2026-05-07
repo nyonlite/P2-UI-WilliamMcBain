@@ -3,7 +3,7 @@ using UnityEngine;
 public class animatorscript : MonoBehaviour
 {
     public PlayerAction playeraction;
-    [SerializeField] public Player Guy;
+    //[SerializeField] public Player Guy;
     [SerializeField] public Animator animator;
     public bool Idle;
     public bool IsMoving;
