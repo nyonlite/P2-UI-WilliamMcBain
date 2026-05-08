@@ -77,7 +77,7 @@ public class PlayerController : MonoBehaviour
     {
         if (context.performed && canTalk) 
         {
-            npc.StartDialogue();
+            //npc.StartDialogue();
         }
 
     }
