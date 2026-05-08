@@ -4,6 +4,8 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] NPCDialogue npc;
+    
     private Rigidbody2D rb;
     private SpriteRenderer myPlayerRender;
 
@@ -11,6 +13,7 @@ public class PlayerController : MonoBehaviour
     private MyInputSystem inputSet;
     private InputAction move;
     private InputAction jump;
+    private InputAction interact;
 
     //--Movement--//
     private Vector2 movement;
@@ -39,6 +42,7 @@ public class PlayerController : MonoBehaviour
     private bool isJumpReleased = false;
     private bool isJumping = false;
     private bool isJumpHeld = false;
+    private bool canTalk = false;
 
     private void OnEnable()
     {
@@ -48,14 +52,19 @@ public class PlayerController : MonoBehaviour
         jump.Enable();
         jump.performed += onJumpPerformed;
         jump.canceled += onJumpCanceled;
+        interact = inputSet.Player.Interact;
+        interact.Enable();
+        interact.performed += onTalkPerformed;
     }
 
     private void OnDisable()
     {
         jump.performed -= onJumpPerformed;
-        jump.canceled -= onJumpCanceled; 
+        jump.canceled -= onJumpCanceled;
+        interact.performed -= onTalkPerformed;
         move.Disable();
         jump.Disable();
+        interact.Disable();
     }
     private bool isGrounded()
     {
@@ -63,6 +72,16 @@ public class PlayerController : MonoBehaviour
 
         return Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
     }
+
+    void onTalkPerformed(InputAction.CallbackContext context)
+    {
+        if (context.performed && canTalk) 
+        {
+            npc.StartDialogue();
+        }
+
+    }
+
     void onJumpPerformed(InputAction.CallbackContext context)
     {
         if (context.performed)
@@ -166,6 +185,25 @@ public class PlayerController : MonoBehaviour
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, maxFallSpeed);
         }
     }
+    public void CutsceneStart()
+    {
+        jump.performed -= onJumpPerformed;
+        jump.canceled -= onJumpCanceled;
+        interact.performed -= onTalkPerformed;
+        move.Disable();
+        jump.Disable();
+        interact.Disable();
+    } 
+
+    public void CutsceneEnd()
+    {
+        move.Enable();
+        jump.Enable();
+        jump.performed += onJumpPerformed;
+        interact.Enable();
+        interact.performed += onTalkPerformed;
+    }
+
     private void Awake()
     {
         inputSet = new MyInputSystem();
@@ -178,10 +216,27 @@ public class PlayerController : MonoBehaviour
 
         movement = move.ReadValue<Vector2>();
         JumpCheck();
+
+
     }
     private void FixedUpdate()
     {
         ApplyGravity();
         RunningCheck();
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("NPC"))
+        {
+            canTalk = true;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("NPC"))
+        {
+            canTalk = false;
+        }
     }
 }
