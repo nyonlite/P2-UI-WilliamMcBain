@@ -25,7 +25,9 @@ public class SaveManager
 
     public void Save()
     {
+
         File.WriteAllText(saveFile, JsonUtility.ToJson(this));
+
     }
 
     public static SaveManager Load() // add save file ID as an argument once I have a save menu

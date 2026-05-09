@@ -8,12 +8,14 @@ public class ItemData : ScriptableObject
     [SerializeField] private string itemName;
     [SerializeField] private float value;
     [SerializeField] private Sprite icon;
+    [SerializeField] private bool collected;
 
 
     public ItemType Type() { return type; }
     public string ItemName() { return itemName; } 
     public float Value() { return value; }
     public Sprite Icon() { return icon; }
+    public bool Collected() { return collected; }
 
          
 }

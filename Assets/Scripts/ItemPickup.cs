@@ -28,6 +28,7 @@ public class ItemPickup : MonoBehaviour
                         Debug.Log(type.Type());
                         manager.AddGold(1);
                     }
+                        
                     
                         Destroy(gameObject);
                     
