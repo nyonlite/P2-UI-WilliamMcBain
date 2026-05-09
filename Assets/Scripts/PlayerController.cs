@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] NPCDialogue npc;
+    [SerializeField] NPC npc;
     
     private Rigidbody2D rb;
     private SpriteRenderer myPlayerRender;
@@ -77,7 +77,7 @@ public class PlayerController : MonoBehaviour
     {
         if (context.performed && canTalk) 
         {
-            //npc.StartDialogue();
+            npc.StartDialogue();
         }
 
     }

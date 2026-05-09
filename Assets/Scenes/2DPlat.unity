@@ -2674,13 +2674,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d867affb2a85d54fb9a1232b97861d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPC
-  pC: {fileID: 0}
-  dData: {fileID: 0}
-  dialogueBox: {fileID: 0}
-  dText: {fileID: 0}
-  bText1: {fileID: 0}
-  bText2: {fileID: 0}
-  bText3: {fileID: 0}
+  pC: {fileID: 1628286959}
+  dData: {fileID: 11400000, guid: 40d269a5613f56544b2e803c329d1cda, type: 2}
+  dialogueBox: {fileID: 1404020335}
+  dText: {fileID: 365125101}
+  bText1: {fileID: 875327955}
+  bText2: {fileID: 716808658}
+  bText3: {fileID: 1499722569}
 --- !u!1 &1357651548
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,10 +15,16 @@ MonoBehaviour:
   npcName: Blue Dude
   dialogueLines:
   - Hey! How are you doing?
-  - Awesome! That's good to hear!
-  - Were you looking for kiwis?
-  - I thought so! Have one!
-  - Oh, okay...
-  - Aw, I'm sorry to hear...
-  - 
-  typingSpeed: 0
+  - That's great! Are you looking for kiwis?
+  - Here, you can have mine!
+  - Are you sure? You'll need it later.
+  - Enjoy your day!
+  - Oh no! What's wrong?
+  - Oh! I have one, you can have it!
+  - You know what can help? Kiwis!
+  - 'I hope it made your day a bit better! '
+  - Straight to the point, eh?
+  - Fine, jeez, just take it.
+  - I understand, take your Kiwi.
+  - Just leave me alone.
+  typingSpeed: 1
