@@ -1253,7 +1253,7 @@ Transform:
   m_GameObject: {fileID: 415837220}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.81, y: 14.320001, z: -10}
+  m_LocalPosition: {x: -7.71, y: 7.4900002, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1696,7 +1696,7 @@ Transform:
   m_GameObject: {fileID: 694859152}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.81, y: 14.32, z: -10}
+  m_LocalPosition: {x: -7.71, y: 7.49, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2280,11 +2280,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1182638184 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2478120180239210928, guid: 3367f05ade46c974c8cafe88c727ea94, type: 3}
-  m_PrefabInstance: {fileID: 2121628005}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1230945334
 GameObject:
   m_ObjectHideFlags: 0
@@ -2688,7 +2683,6 @@ MonoBehaviour:
   button1: {fileID: 1922252206}
   button2: {fileID: 187912622}
   button3: {fileID: 74240221}
-  kiwi: {fileID: 1182638184}
   dText: {fileID: 365125101}
   bText1: {fileID: 875327955}
   bText2: {fileID: 716808658}
@@ -3514,7 +3508,7 @@ Transform:
   m_GameObject: {fileID: 1628286954}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.81, y: 11.32, z: -0}
+  m_LocalPosition: {x: -7.71, y: 4.49, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

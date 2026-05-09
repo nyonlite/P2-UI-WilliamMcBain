@@ -8,7 +8,7 @@ public class NPC : MonoBehaviour
 {
     [SerializeField] PlayerController pC;
     [SerializeField] NPCDialogue dData, b1Data, b2Data, b3Data;
-    [SerializeField] GameObject dialogueBox;
+    [SerializeField] GameObject dialogueBox, button1, button2, button3, kiwi;
     [SerializeField] TMP_Text dText, bText1, bText2, bText3;
     private int dialogueIndex, button1Index, button2Index, button3Index;
 
@@ -35,7 +35,9 @@ public class NPC : MonoBehaviour
     public void TypeLine()
     {
         dText.SetText(dData.dialogueLines[dialogueIndex]);
-
+        bText1.SetText(b1Data.dialogueLines[button1Index]);
+        bText2.SetText(b2Data.dialogueLines[button2Index]);
+        bText3.SetText(b3Data.dialogueLines[button3Index]);
     }
 
     public void StopDialogue()
@@ -49,44 +51,111 @@ public class NPC : MonoBehaviour
         if (dialogueIndex == 0)
         {
             dialogueIndex = 1;
+            button1Index = 1;
+            button2Index = 1;
+            button3.SetActive(false);
             TypeLine();
         }
         else if (dialogueIndex == 1||dialogueIndex == 3)
         {
             dialogueIndex = 2;
+            button1Index = 2;
+            button2.SetActive(false);
             TypeLine();
         }
         else if (dialogueIndex == 2|| dialogueIndex == 4)
         {
             pC.CutsceneEnd();
             dialogueIndex = 4;
+            button1Index = 2;
+            button2.SetActive(false);
             dialogueBox.SetActive(false);
+            if (kiwi != null)
+            {
+                kiwi.SetActive(true);
+            }
         }
         else if (dialogueIndex == 5)
         {
             dialogueIndex = 6;
+            button1Index = 2;
+            button2.SetActive(false);
             TypeLine();
+            if (kiwi != null)
+            {
+                kiwi.SetActive(true);
+            }
         }
         else if (dialogueIndex == 6||dialogueIndex == 7|| dialogueIndex == 8)
         {
             pC.CutsceneEnd();
             dialogueIndex = 8;
+            button1Index = 2;
+            button2.SetActive(false);
             dialogueBox.SetActive(false);
         }
-        else if (dialogueIndex == 8)
+        else if (dialogueIndex == 9)
+        {
+            dialogueIndex = 10;
+            button1Index = 7;
+            button2.SetActive(false);
+            TypeLine(); 
+            if (kiwi != null)
+            {
+                kiwi.SetActive(true);
+            }
+        }
+        else if (dialogueIndex == 10 || dialogueIndex == 11 || dialogueIndex == 12)
         {
             pC.CutsceneEnd();
+            dialogueIndex = 12;
+            button1Index = 7;
+            button2.SetActive(false);
             dialogueBox.SetActive(false);
         }
     }
 
     public void DialogueB()
     {
-
+        if (dialogueIndex == 0)
+        {
+            dialogueIndex = 5;
+            button1Index = 4;
+            button2Index = 3;
+            TypeLine();
+            button3.SetActive(false);
+        }
+        else if (dialogueIndex == 1||dialogueIndex ==3)
+        {
+            dialogueIndex = 3;
+            button1Index = 3;
+            button2Index = 2;
+            TypeLine();
+        }
+        else if (dialogueIndex == 5)
+        {
+            dialogueIndex = 7;
+            button1Index = 0;
+            button2.SetActive(false);
+            TypeLine();
+        }
+        else if (dialogueIndex == 9)
+        {
+            dialogueIndex = 11;
+            button1Index = 7;
+            button2.SetActive(false);
+            TypeLine();
+        }
     }
 
     public void DialogueC()
     {
+        dialogueIndex = 9;
+        button1Index = 5;
+        button2Index = 4;
+        TypeLine();
+
+        button3.SetActive(false);
 
     }
 

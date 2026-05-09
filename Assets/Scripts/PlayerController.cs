@@ -200,6 +200,7 @@ public class PlayerController : MonoBehaviour
         move.Enable();
         jump.Enable();
         jump.performed += onJumpPerformed;
+        jump.canceled += onJumpCanceled;
         interact.Enable();
         interact.performed += onTalkPerformed;
     }

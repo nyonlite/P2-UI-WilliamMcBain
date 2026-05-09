@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Button3
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
   npcName: 
-  dialogueLines: []
+  dialogueLines:
+  - KIWIS
   typingSpeed: 0

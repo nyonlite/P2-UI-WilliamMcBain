@@ -12,6 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bd13e612b2f2904183d32912cc561df, type: 3}
   m_Name: Button2
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
-  npcName: 
-  dialogueLines: []
+  npcName: none
+  dialogueLines:
+  - Not great...
+  - Not really...
+  - Still no.
+  - I have scurvy.
+  - Listen, I'm in a hurry.
   typingSpeed: 0

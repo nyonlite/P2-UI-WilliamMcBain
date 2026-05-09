@@ -14,7 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
   npcName: none
   dialogueLines:
-  - 
-  - 
-  - 
+  - Great!
+  - I am!
+  - Thanks!
+  - Okay, fine.
+  - I really need Kiwis...
+  - Kiwi. Now.
+  - Finally.
+  - ...
   typingSpeed: 0
