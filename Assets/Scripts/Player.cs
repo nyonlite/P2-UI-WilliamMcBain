@@ -1,11 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
     public int level = 3;
     public int health = 40;
+
+    #region Ui Methods
+    public void ChangeLevel(int amount)
+    {
+        level += amount;
+    }
+    public void ChangeHealth(int amount)
+    { health += amount; }
+
+    #endregion
 
     public void SavePlayer()
     {
@@ -14,7 +22,7 @@ public class Player : MonoBehaviour
 
     public void LoadPlayer()
     {
-        PlayerData data = SaveSystenm.LoadPlayer();
+        PlayerData data = SaveSystem.LoadPlayer();
 
         level = data.level;
         health = data.health;

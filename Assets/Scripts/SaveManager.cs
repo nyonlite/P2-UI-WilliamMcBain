@@ -10,8 +10,8 @@ public class SaveManager
 
     // default values
 
-    public Vector3 loadAt; // default is 0, 0, 0
-    
+    public Vector3 loadAt; // default is 0, 0, 0
+
 
 
 

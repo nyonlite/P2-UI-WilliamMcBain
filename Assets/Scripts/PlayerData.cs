@@ -1,19 +1,14 @@
-using NUnit.Framework;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 [System.Serializable]
-public class PlayerData 
+public class PlayerData
 {
     public int level;
     public int health;
     public float[] position;
 
-    public PlayerData ( PlayerController player)
+    public PlayerData(Player player)
     {
-        //level = player.level;
-        //health = player.health;
+        level = player.level;
+        health = player.health;
 
         position = new float[3];
         position[0] = player.transform.position.x;
