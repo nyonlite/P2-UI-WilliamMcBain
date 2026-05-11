@@ -1546,7 +1546,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 169454649}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11500000, guid: d07646ea68d3aa347a5d1470ddf4b888, type: 3}
+        m_TargetAssemblyTypeName: UnityEditor.MonoScript, UnityEditor.CoreModule
+        m_MethodName: set_name
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: save
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &169454649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4745,7 +4757,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1461309843}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11500000, guid: d07646ea68d3aa347a5d1470ddf4b888, type: 3}
+        m_TargetAssemblyTypeName: UnityEditor.MonoScript, UnityEditor.CoreModule
+        m_MethodName: set_name
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: load
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1461309843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5501,7 +5525,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1557212490
 MonoBehaviour:
   m_ObjectHideFlags: 0
