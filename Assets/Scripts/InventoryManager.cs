@@ -33,10 +33,7 @@ public class InventoryManager : MonoBehaviour
         heldItems.Add(type);
         onInventoryChanged.Invoke();
 
-        if(ItemDefinitions.Instance !=null
-            //&& ItemDefinitions.Instance.TryGetItemData(type, out ItemData data)
-            //unsure why this line wasn't working
-            )
+        if(ItemDefinitions.Instance !=null)
         {
             Debug.Log($"Picked up: {type}");
         }
@@ -86,8 +83,10 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    
-
+    public void ClearInventory()
+    {
+        heldItems.RemoveAll(x => x != null);
+    }
     [ContextMenu("Test: Use First Item")]
     public void TestUseFirst() => UseFirstItem();
 

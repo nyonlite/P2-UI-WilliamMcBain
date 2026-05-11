@@ -43,6 +43,13 @@ public class GameManager : MonoBehaviour
         Debug.Log($"Gold count: {coinCount}");
     }
 
+    public void ResetGold()
+    {
+        coinCount = 0;
+        OnGoldChanged?.Invoke(coinCount); 
+        Debug.Log($"Gold count: {coinCount}");
+    }
+
     [ContextMenu("Test: Take 10 Damage")]
     public void TestTakeDamage() => TakeDamage(10f);
 

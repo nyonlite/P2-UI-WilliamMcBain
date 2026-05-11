@@ -27,10 +27,9 @@ public class NPC : MonoBehaviour
 
     public void StartDialogue()
     {
-        if (player!= null)
-        {
+
             dialogueIndex = player.dialogueIndex;
-        }
+        
         pC.CutsceneStart();
         dialogueBox.SetActive(true);
 
@@ -77,7 +76,7 @@ public class NPC : MonoBehaviour
             button1Index = 2;
             button2.SetActive(false);
             dialogueBox.SetActive(false);
-            if (kiwi != null)
+            if (kiwi != null && player.kiwi1Get==false)
             {
                 kiwi.SetActive(true);
             }
@@ -88,10 +87,7 @@ public class NPC : MonoBehaviour
             button1Index = 2;
             button2.SetActive(false);
             TypeLine();
-            if (kiwi != null)
-            {
-                kiwi.SetActive(true);
-            }
+
         }
         else if (dialogueIndex == 6||dialogueIndex == 7|| dialogueIndex == 8)
         {
@@ -100,6 +96,10 @@ public class NPC : MonoBehaviour
             button1Index = 2;
             button2.SetActive(false);
             dialogueBox.SetActive(false);
+            if (kiwi != null && player.kiwi1Get == false)
+            {
+                kiwi.SetActive(true);
+            }
         }
         else if (dialogueIndex == 9)
         {
@@ -107,10 +107,7 @@ public class NPC : MonoBehaviour
             button1Index = 7;
             button2.SetActive(false);
             TypeLine(); 
-            if (kiwi != null)
-            {
-                kiwi.SetActive(true);
-            }
+
         }
         else if (dialogueIndex == 10 || dialogueIndex == 11 || dialogueIndex == 12)
         {
@@ -119,6 +116,10 @@ public class NPC : MonoBehaviour
             button1Index = 7;
             button2.SetActive(false);
             dialogueBox.SetActive(false);
+            if (kiwi != null && player.kiwi1Get == false)
+            {
+                kiwi.SetActive(true);
+            }
         }
     }
 
