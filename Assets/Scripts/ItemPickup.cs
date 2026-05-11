@@ -7,11 +7,6 @@ public class ItemPickup : MonoBehaviour
     [SerializeField] private ItemData type;
     [SerializeField] private GameManager manager;
     
-   
-    void OnStart()
-    {
-       
-    } 
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -23,6 +18,35 @@ public class ItemPickup : MonoBehaviour
                 bool pickedUp = inventory.PickUp(type);
                 if (pickedUp)
                 {
+                    Player player = other.GetComponent<Player>();
+                    if (gameObject.name == "CherryPotion")
+                    {
+                        player.cherryGet = true;
+                    }
+                    else if (gameObject.name == "MelonBoots")
+                    {
+                        player.melonGet = true;
+                    }
+                    else if (gameObject.name == "KiwiCoin")
+                    {
+                        player.kiwi0Get = true;
+                    }
+                    else if (gameObject.name == "KiwiCoin (1)")
+                    {
+                        player.kiwi1Get = true;
+                    }
+                    else if (gameObject.name == "KiwiCoin (2)")
+                    {
+                        player.kiwi2Get = true;
+                    }
+                    else if (gameObject.name == "KiwiCoin (3)")
+                    {
+                        player.kiwi3Get = true;
+                    }
+                    else if (gameObject.name == "KiwiCoin (4)")
+                    {
+                        player.kiwi4Get = true;
+                    }
                     if (type.Type() == ItemType.Coin)
                     {
                         Debug.Log(type.Type());

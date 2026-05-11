@@ -4346,6 +4346,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPC
   pC: {fileID: 1628286959}
+  player: {fileID: 0}
   dData: {fileID: 11400000, guid: 40d269a5613f56544b2e803c329d1cda, type: 2}
   b1Data: {fileID: 11400000, guid: a152f93888224ac4ca3c2a9709c49e20, type: 2}
   b2Data: {fileID: 11400000, guid: 2a3ac76be2cea534891186d1ba50a902, type: 2}
@@ -4359,6 +4360,10 @@ MonoBehaviour:
   bText1: {fileID: 875327955}
   bText2: {fileID: 716808658}
   bText3: {fileID: 1499722569}
+  dialogueIndex: 0
+  button1Index: 0
+  button2Index: 0
+  button3Index: 0
 --- !u!1 &1304456849
 GameObject:
   m_ObjectHideFlags: 0
@@ -5525,7 +5530,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1557212490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5901,6 +5906,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   npc: {fileID: 1291836721}
+  pauseMenu: {fileID: 1557212489}
+  menu: {fileID: 1557212494}
   topSpeed: 10
   accelRate: 20
   turnMultiplier: 2
