@@ -4,23 +4,9 @@ using UnityEngine.SceneManagement;
 public class Menu : MonoBehaviour
 {
     [SerializeField] public GameObject PauseMenuUi; // brings up pause ui 
-    [SerializeField] private bool isPaused = false;
+    public bool isPaused = false;
 
-    void Update()
-    {
-        //toggle pause menu 
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if(!isPaused)
-            {
-                Resume();
-            }
-            else
-            {
-                Pause();
-            }
-        }
-    }
+
     public void Resume()
     {
         PauseMenuUi.SetActive(false);

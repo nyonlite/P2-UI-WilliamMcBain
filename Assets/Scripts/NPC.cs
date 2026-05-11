@@ -7,10 +7,11 @@ using UnityEngine.UI;
 public class NPC : MonoBehaviour
 {
     [SerializeField] PlayerController pC;
+    [SerializeField] Player player;
     [SerializeField] NPCDialogue dData, b1Data, b2Data, b3Data;
     [SerializeField] GameObject dialogueBox, button1, button2, button3, kiwi;
     [SerializeField] TMP_Text dText, bText1, bText2, bText3;
-    private int dialogueIndex, button1Index, button2Index, button3Index;
+    public int dialogueIndex, button1Index, button2Index, button3Index;
 
 
 
@@ -26,6 +27,9 @@ public class NPC : MonoBehaviour
 
     public void StartDialogue()
     {
+
+            dialogueIndex = player.dialogueIndex;
+        
         pC.CutsceneStart();
         dialogueBox.SetActive(true);
 
@@ -38,6 +42,8 @@ public class NPC : MonoBehaviour
         bText1.SetText(b1Data.dialogueLines[button1Index]);
         bText2.SetText(b2Data.dialogueLines[button2Index]);
         bText3.SetText(b3Data.dialogueLines[button3Index]);
+        //Save Dialogue spot
+        player.dialogueIndex = dialogueIndex;
     }
 
     public void StopDialogue()
@@ -70,7 +76,7 @@ public class NPC : MonoBehaviour
             button1Index = 2;
             button2.SetActive(false);
             dialogueBox.SetActive(false);
-            if (kiwi != null)
+            if (kiwi != null && player.kiwi1Get==false)
             {
                 kiwi.SetActive(true);
             }
@@ -81,10 +87,7 @@ public class NPC : MonoBehaviour
             button1Index = 2;
             button2.SetActive(false);
             TypeLine();
-            if (kiwi != null)
-            {
-                kiwi.SetActive(true);
-            }
+
         }
         else if (dialogueIndex == 6||dialogueIndex == 7|| dialogueIndex == 8)
         {
@@ -93,6 +96,10 @@ public class NPC : MonoBehaviour
             button1Index = 2;
             button2.SetActive(false);
             dialogueBox.SetActive(false);
+            if (kiwi != null && player.kiwi1Get == false)
+            {
+                kiwi.SetActive(true);
+            }
         }
         else if (dialogueIndex == 9)
         {
@@ -100,10 +107,7 @@ public class NPC : MonoBehaviour
             button1Index = 7;
             button2.SetActive(false);
             TypeLine(); 
-            if (kiwi != null)
-            {
-                kiwi.SetActive(true);
-            }
+
         }
         else if (dialogueIndex == 10 || dialogueIndex == 11 || dialogueIndex == 12)
         {
@@ -112,6 +116,10 @@ public class NPC : MonoBehaviour
             button1Index = 7;
             button2.SetActive(false);
             dialogueBox.SetActive(false);
+            if (kiwi != null && player.kiwi1Get == false)
+            {
+                kiwi.SetActive(true);
+            }
         }
     }
 

@@ -5,6 +5,13 @@ TagManager:
   serializedVersion: 3
   tags:
   - NPC
+  - Cherry
+  - Melon
+  - Kiwi0
+  - Kiwi1
+  - Kiwi2
+  - Kiwi3
+  - Kiwi4
   layers:
   - Default
   - TransparentFX

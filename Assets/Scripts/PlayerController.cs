@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
@@ -5,6 +6,8 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] NPC npc;
+    [SerializeField] GameObject pauseMenu;
+    [SerializeField] Menu menu;
     
     private Rigidbody2D rb;
     private SpriteRenderer myPlayerRender;
@@ -14,6 +17,7 @@ public class PlayerController : MonoBehaviour
     private InputAction move;
     private InputAction jump;
     private InputAction interact;
+    private InputAction pause;
 
     //--Movement--//
     private Vector2 movement;
@@ -55,6 +59,9 @@ public class PlayerController : MonoBehaviour
         interact = inputSet.Player.Interact;
         interact.Enable();
         interact.performed += onTalkPerformed;
+        pause = inputSet.Player.Pause;
+        pause.Enable();
+        pause.performed += onPausePerformed;
     }
 
     private void OnDisable()
@@ -62,15 +69,35 @@ public class PlayerController : MonoBehaviour
         jump.performed -= onJumpPerformed;
         jump.canceled -= onJumpCanceled;
         interact.performed -= onTalkPerformed;
+        pause.performed -= onPausePerformed;
         move.Disable();
         jump.Disable();
         interact.Disable();
+        pause.Disable();
     }
     private bool isGrounded()
     {
         //I chose the overlap circle method, as it is a quick single line of code and is not prone to errors.
 
         return Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+    }
+
+    void onPausePerformed(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            if (menu.isPaused == false)
+            {
+                pauseMenu.SetActive(true);
+                menu.Pause();
+            }
+            else if (menu.isPaused) 
+            {
+                menu.Resume();
+            }
+
+
+        }
     }
 
     void onTalkPerformed(InputAction.CallbackContext context)
