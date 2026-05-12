@@ -1705,7 +1705,7 @@ GameObject:
   - component: {fileID: 277547000}
   - component: {fileID: 277547002}
   - component: {fileID: 277547001}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1917,7 +1917,7 @@ GameObject:
   - component: {fileID: 379511244}
   - component: {fileID: 379511246}
   - component: {fileID: 379511245}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2471,7 +2471,7 @@ GameObject:
   - component: {fileID: 571501277}
   - component: {fileID: 571501279}
   - component: {fileID: 571501278}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3783,7 +3783,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1130453955}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5310,7 +5310,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1516363806}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Handle Slide Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6339,7 +6339,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1798823675}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Option menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6791,7 +6791,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1998849932}
   - component: {fileID: 1998849933}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
